@@ -129,6 +129,10 @@ void DrawObject::_Init(void)
                 DEBUG(logdebug("GAMEOBJECT UNKNOWN: %u", _obj->GetEntry()));
             }
         }
+		
+		for (int i = 0; i < modelfilename.length(); ++i) {
+				modelfilename[i] = tolower(modelfilename[i]);
+		}
 
         io::IReadFile* modelfile = io::IrrCreateIReadFileBasic(_device, modelfilename.c_str());
         if (!modelfile)
