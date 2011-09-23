@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="Windows-1252"?>
 <VisualStudioProject
 	ProjectType="Visual C++"
-	Version="9,00"
+	Version="9.00"
 	Name="shared"
 	ProjectGUID="{F548FC51-24A4-45FF-A381-BEBC39F18270}"
 	RootNamespace="PseuWoW_Controller"
@@ -45,7 +45,7 @@
 			<Tool
 				Name="VCCLCompilerTool"
 				Optimization="0"
-				AdditionalIncludeDirectories="dep/include;Client;shared"
+				AdditionalIncludeDirectories="dep/include;Client;shared;dep\include\StormLib"
 				PreprocessorDefinitions="WIN32;_DEBUG;_CONSOLE"
 				BasicRuntimeChecks="3"
 				RuntimeLibrary="1"

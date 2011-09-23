@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="Windows-1252"?>
 <VisualStudioProject
 	ProjectType="Visual C++"
-	Version="9,00"
+	Version="9.00"
 	Name="StuffExtract"
 	ProjectGUID="{F14CA928-E505-41F1-BE45-CCF6B85547D2}"
 	RootNamespace="StuffExtract"
@@ -143,7 +143,7 @@
 			<Tool
 				Name="VCCLCompilerTool"
 				Optimization="0"
-				AdditionalIncludeDirectories="../shared;../dep/include;../dep/include/zlib;StormLib"
+				AdditionalIncludeDirectories="../shared;../dep/include;../dep/include/zlib;../dep/StormLib"
 				PreprocessorDefinitions="WIN32;_DEBUG;_CONSOLE"
 				BasicRuntimeChecks="3"
 				RuntimeLibrary="1"
@@ -169,7 +169,7 @@
 			/>
 			<Tool
 				Name="VCLinkerTool"
-				AdditionalDependencies="odbc32.lib odbccp32.lib WS2_32.LIB"
+				AdditionalDependencies="odbc32.lib odbccp32.lib WS2_32.LIB $(SolutionDir)src\dep\StormLib\StormLib.lib"
 				OutputFile="$(OutDir)/$(InputName)_debug.exe"
 				LinkIncremental="2"
 				SuppressStartupBanner="true"
@@ -206,6 +206,10 @@
 		</Configuration>
 	</Configurations>
 	<References>
+		<ProjectReference
+			ReferencedProjectIdentifier="{F548FC51-24A4-45FF-A381-BEBC39F18270}"
+			RelativePathToProject=".\src\shared_VC90.vcproj"
+		/>
 	</References>
 	<Files>
 		<Filter

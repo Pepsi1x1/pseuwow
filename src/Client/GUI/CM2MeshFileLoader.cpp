@@ -462,12 +462,12 @@ for(u32 i=0; i < currentView.nSub;i++)//
     //Put the Indices and Vertices of the Submesh into a mesh buffer
     //Each Submesh contains only the Indices and Vertices that belong to it.
     //Because of this the Index values for the Submeshes must be corrected by the Vertex offset of the Submesh
-    for(u32 j=M2MSubmeshes[i].ofsTris;j<M2MSubmeshes[i].ofsTris+M2MSubmeshes[i].nTris;j++)
+    for(s32 j=M2MSubmeshes[i].ofsTris;j<M2MSubmeshes[i].ofsTris+M2MSubmeshes[i].nTris;j++)
     {
         MeshBuffer->Indices.push_back(M2MIndices[M2MTriangles[j]]-M2MSubmeshes[i].ofsVertex);
     }
 
-    for(u32 j=M2MSubmeshes[i].ofsVertex;j<M2MSubmeshes[i].ofsVertex+M2MSubmeshes[i].nVertex;j++)
+    for(s32 j=M2MSubmeshes[i].ofsVertex;j<M2MSubmeshes[i].ofsVertex+M2MSubmeshes[i].nVertex;j++)
     {
         MeshBuffer->Vertices_Standard.push_back(M2Vertices[j]);
         for(u32 k=0; k<4; k++)

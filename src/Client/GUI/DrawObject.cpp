@@ -130,7 +130,7 @@ void DrawObject::_Init(void)
             }
         }
 		
-		for (char i = 0; i < modelfilename.length(); ++i) {
+		for (unsigned int i = 0; i < modelfilename.length(); ++i) {
 				modelfilename[i] = tolower(modelfilename[i]);
 		}
 

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="Windows-1252"?>
 <VisualStudioProject
 	ProjectType="Visual C++"
-	Version="9,00"
+	Version="9.00"
 	Name="PseuWoW"
 	ProjectGUID="{EFFE60F4-DA39-41E8-9E53-E462000A2D91}"
 	RootNamespace="PseuWoW"
@@ -173,12 +173,12 @@
 			/>
 			<Tool
 				Name="VCLinkerTool"
-				AdditionalDependencies="odbc32.lib odbccp32.lib WS2_32.LIB irrKlang.lib"
+				AdditionalDependencies="odbc32.lib odbccp32.lib WS2_32.LIB irrKlang.lib Irrlicht.lib $(SolutionDir)src\dep\StormLib\StormLib.lib"
 				OutputFile="$(OutDir)/$(InputName)_debug.exe"
 				LinkIncremental="2"
 				SuppressStartupBanner="true"
-				AdditionalLibraryDirectories="$(SolutionDir)\src\dep\lib\static"
-				IgnoreDefaultLibraryNames="libci.lib"
+				AdditionalLibraryDirectories="&quot;$(SolutionDir)\src\dep\lib\static&quot;;&quot;$(SolutionDir)\src\dep\lib&quot;;&quot;$(SolutionDir)\src\dep\lib\Win32-visualstudio&quot;"
+				IgnoreDefaultLibraryNames="libci.lib;libcmt.lib"
 				GenerateDebugInformation="true"
 				ProgramDatabaseFile="$(SolutionDir)/temp/$(ProjectName)/PseuWoW.pdb"
 				SubSystem="1"
