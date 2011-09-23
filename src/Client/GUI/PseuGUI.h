@@ -1,6 +1,8 @@
 #ifndef PSEUGUI_H
 #define PSEUGUI_H
 
+#define IMPLEMENT_GUI 1
+
 #ifndef IMPLEMENT_GUI
 #include "PseuGUIstub.h"
 
