@@ -2,6 +2,7 @@
 #define _SCENE_H
 
 #include "irrlicht/irrlicht.h"
+#include "irrklang/irrKlang.h"
 #include "SceneData.h"
 
 using namespace irr;

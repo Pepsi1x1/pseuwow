@@ -1,4 +1,4 @@
-// Copyright (C) 2002-2008 Nikolaus Gebhardt
+// Copyright (C) 2002-2009 Nikolaus Gebhardt
 // This file is part of the "Irrlicht Engine" and the "irrXML" project.
 // For conditions of distribution and use, see copyright notice in irrlicht.h and irrXML.h
 
@@ -15,8 +15,8 @@ namespace irr
 namespace core
 {
 
-// we write [16] here instead of [] to work around a swig bug
-const float fast_atof_table[16] = {
+// we write [17] here instead of [] to work around a swig bug
+const float fast_atof_table[17] = {
 	0.f,
 	0.1f,
 	0.01f,
@@ -32,7 +32,8 @@ const float fast_atof_table[16] = {
 	0.000000000001f,
 	0.0000000000001f,
 	0.00000000000001f,
-	0.000000000000001f
+	0.000000000000001f,
+	0.0000000000000001f
 };
 
 //! Convert a simple string of base 10 digits into a signed 32 bit integer.

@@ -70,3 +70,13 @@ Thumbs.db
 ######################
 !src/dep/src/irrlicht/Makefile
 
+
+/_ReSharper.*
+/_UpgradeReport_Files
+/ipch
+/Debug
+/src/dep/src/obj
+/UpgradeLog*.XML
+*.suo
+*.sdf
+*.user

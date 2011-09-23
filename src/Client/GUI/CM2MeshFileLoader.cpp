@@ -98,6 +98,8 @@ DEBUG(logdebug("Read %u/%u Vertices",M2MVertices.size(),header.nVertices));
 
 //Views (skins) == Sets of vertices. Usage yet unknown. Global data
 
+//IrrLicht 1.7
+//std::string SkinName = MeshFile->getFileName().c_str();
 std::string SkinName = MeshFile->getFileName();
 SkinName = SkinName.substr(0, SkinName.length()-3) + "00.skin"; // FIX ME (and stuffextract) ! as we need more skins
 io::IReadFile* SkinFile = io::IrrCreateIReadFileBasic(Device, SkinName.c_str());

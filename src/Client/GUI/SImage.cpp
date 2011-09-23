@@ -47,13 +47,18 @@ SImage::~SImage()
         delete Data;
 }
 
+//IrrLicht 1.7
+//! Returns width and height of image data.
+//const core::dimension2d<u32>& SImage::getDimension() const
+//{
+//	return Size;
+//}
 
 //! Returns width and height of image data.
 const core::dimension2d<s32>& SImage::getDimension() const
 {
 	return Size;
 }
-
 
 
 //! Returns bits per pixel.
@@ -149,7 +154,7 @@ void SImage::setBitMasks()
 }
 
 //! sets a pixel
-void SImage::setPixel(u32 x, u32 y, const SColor &color )
+void SImage::setPixel(u32 x, u32 y, const SColor &color)
 {
 	if (x >= (u32)Size.Width || y >= (u32)Size.Height)
 		return;
@@ -312,6 +317,8 @@ void SImage::copyToScaling(IImage* target)
 	if (!target)
 		return;
 
+	//IrrLicht 1.7
+	//const core::dimension2d<u32>& targetSize = target->getDimension();
 	const core::dimension2d<s32>& targetSize = target->getDimension();
 
 	if (targetSize==Size)

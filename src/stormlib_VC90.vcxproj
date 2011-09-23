@@ -1,0 +1,143 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectName>stormlib</ProjectName>
+    <ProjectGuid>{75DB41FE-4102-40BA-87F1-0D7B593BE127}</ProjectGuid>
+    <RootNamespace>stormlib</RootNamespace>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseOfMfc>false</UseOfMfc>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="$(VCTargetsPath)Microsoft.CPP.UpgradeFromVC71.props" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="$(VCTargetsPath)Microsoft.CPP.UpgradeFromVC71.props" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <_ProjectFileVersion>10.0.30319.1</_ProjectFileVersion>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(SolutionDir)/temp/$(ProjectName)/$(Configuration)\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(SolutionDir)/temp/$(ProjectName)/$(Configuration)\</IntDir>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(SolutionDir)/temp/$(ProjectName)/$(Configuration)\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(SolutionDir)/temp/$(ProjectName)/$(Configuration)\</IntDir>
+    <CodeAnalysisRuleSet Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">AllRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRules Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" />
+    <CodeAnalysisRuleAssemblies Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" />
+    <CodeAnalysisRuleSet Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">AllRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRules Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" />
+    <CodeAnalysisRuleAssemblies Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" />
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <Optimization>Disabled</Optimization>
+      <AdditionalIncludeDirectories>dep/include/StormLib;dep/include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_LIB;_CRT_SECURE_NO_WARNINGS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MinimalRebuild>true</MinimalRebuild>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
+      <RuntimeTypeInfo>false</RuntimeTypeInfo>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <PrecompiledHeaderOutputFile>$(SolutionDir)/temp/$(ProjectName)/stormlib.pch</PrecompiledHeaderOutputFile>
+      <AssemblerListingLocation>$(SolutionDir)temp/$(ProjectName)/$(Configuration)/</AssemblerListingLocation>
+      <ObjectFileName>$(SolutionDir)temp/$(ProjectName)/$(Configuration)/</ObjectFileName>
+      <ProgramDataBaseFileName>$(SolutionDir)temp/$(ProjectName)/$(Configuration)/</ProgramDataBaseFileName>
+      <WarningLevel>Level3</WarningLevel>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+    </ClCompile>
+    <Lib>
+      <OutputFile>./dep/lib/debug/stormlib.lib</OutputFile>
+    </Lib>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <FavorSizeOrSpeed>Speed</FavorSizeOrSpeed>
+      <AdditionalIncludeDirectories>dep/include/StormLib;dep/include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_LIB;_CRT_SECURE_NO_WARNINGS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+      <RuntimeTypeInfo>false</RuntimeTypeInfo>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <PrecompiledHeaderOutputFile>$(SolutionDir)/temp/$(ProjectName)/stormlib.pch</PrecompiledHeaderOutputFile>
+      <AssemblerListingLocation>$(SolutionDir)temp/$(ProjectName)/$(Configuration)/</AssemblerListingLocation>
+      <ObjectFileName>$(SolutionDir)temp/$(ProjectName)/$(Configuration)/</ObjectFileName>
+      <ProgramDataBaseFileName>$(SolutionDir)temp/$(ProjectName)/$(Configuration)/</ProgramDataBaseFileName>
+      <WarningLevel>Level3</WarningLevel>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+    </ClCompile>
+    <Lib>
+      <OutputFile>./dep/lib/release/stormlib.lib</OutputFile>
+    </Lib>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="dep\src\StormLib\SAttrFile.cpp" />
+    <ClCompile Include="dep\src\StormLib\SCommon.cpp" />
+    <ClCompile Include="dep\src\StormLib\SCompression.cpp" />
+    <ClCompile Include="dep\src\StormLib\SFileCompactArchive.cpp" />
+    <ClCompile Include="dep\src\StormLib\SFileCreateArchiveEx.cpp" />
+    <ClCompile Include="dep\src\StormLib\SFileExtractFile.cpp" />
+    <ClCompile Include="dep\src\StormLib\SFileFindFile.cpp" />
+    <ClCompile Include="dep\src\StormLib\SFileOpenArchive.cpp" />
+    <ClCompile Include="dep\src\StormLib\SFileOpenFileEx.cpp" />
+    <ClCompile Include="dep\src\StormLib\SFileReadFile.cpp" />
+    <ClCompile Include="dep\src\StormLib\SListFile.cpp" />
+    <ClCompile Include="dep\src\StormLib\StormPortLinux.cpp" />
+    <ClCompile Include="dep\src\StormLib\StormPortMac.cpp" />
+    <ClCompile Include="dep\src\StormLib\bzip2\blocksort.c" />
+    <ClCompile Include="dep\src\StormLib\bzip2\bzip2.c" />
+    <ClCompile Include="dep\src\StormLib\bzip2\bzlib.c" />
+    <ClCompile Include="dep\src\StormLib\bzip2\compress.c" />
+    <ClCompile Include="dep\src\StormLib\bzip2\crctable.c" />
+    <ClCompile Include="dep\src\StormLib\bzip2\decompress.c" />
+    <ClCompile Include="dep\src\StormLib\bzip2\huffman.c" />
+    <ClCompile Include="dep\src\StormLib\bzip2\randtable.c" />
+    <ClCompile Include="dep\src\StormLib\wave\wave.cpp" />
+    <ClCompile Include="dep\src\StormLib\huffman\huff.cpp" />
+    <ClCompile Include="dep\src\StormLib\misc\crc32.cpp" />
+    <ClCompile Include="dep\src\StormLib\misc\md5.cpp" />
+    <ClCompile Include="dep\src\StormLib\pklib\crc32.c" />
+    <ClCompile Include="dep\src\StormLib\pklib\crc32_pk.c" />
+    <ClCompile Include="dep\src\StormLib\pklib\explode.c" />
+    <ClCompile Include="dep\src\StormLib\pklib\implode.c" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="dep\src\StormLib\bzip2\bzlib.h" />
+    <ClInclude Include="dep\src\StormLib\bzip2\bzlib_private.h" />
+    <ClInclude Include="dep\src\StormLib\wave\wave.h" />
+    <ClInclude Include="dep\src\StormLib\huffman\huff.h" />
+    <ClInclude Include="dep\src\StormLib\misc\crc32.h" />
+    <ClInclude Include="dep\src\StormLib\misc\md5.h" />
+    <ClInclude Include="dep\src\StormLib\pklib\pklib.h" />
+    <ClInclude Include="dep\include\StormLib\SCommon.h" />
+    <ClInclude Include="dep\include\StormLib\StormDll.h" />
+    <ClInclude Include="dep\include\StormLib\StormLib.h" />
+    <ClInclude Include="dep\include\StormLib\StormPort.h" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

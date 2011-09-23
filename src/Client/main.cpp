@@ -4,7 +4,7 @@
 #include "main.h"
 #include "PseuWoW.h"
 #include "MemoryDataHolder.h"
-
+#pragma comment(lib, "Irrlicht.lib")
 
 std::list<PseuInstanceRunnable*> instanceList; // TODO: move this to a "Master" class later
 

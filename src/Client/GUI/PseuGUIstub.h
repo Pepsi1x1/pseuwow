@@ -36,6 +36,7 @@ public:
     PseuGUI() {};
 
     void SetInstance(PseuInstance*) {};
+	inline PseuInstance *GetInstance(void) { return 0; }
     void SetDriver(uint8) {};
     void SetResolution(uint16 x, uint16 y, uint16 depth=32) {};
     void SetWindowed(bool) {};

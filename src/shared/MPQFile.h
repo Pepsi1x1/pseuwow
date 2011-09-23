@@ -2,9 +2,10 @@
 #define MPQFILE_H
 
 #define _COMMON_NO_THREADS
+#define __STORMLIB_SELF__               // Don't use StormLib.lib
 #include "common.h"
-#include "StormLib/StormLib.h"
-#include "StormLib/SCommon.h"
+#include "StormLib.h"
+#include "StormCommon.h"
 
 class MPQFile
 {

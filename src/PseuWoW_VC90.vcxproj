@@ -1,0 +1,555 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release noconsole|Win32">
+      <Configuration>Release noconsole</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectName>PseuWoW</ProjectName>
+    <ProjectGuid>{EFFE60F4-DA39-41E8-9E53-E462000A2D91}</ProjectGuid>
+    <RootNamespace>PseuWoW</RootNamespace>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release noconsole|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseOfMfc>false</UseOfMfc>
+    <CharacterSet>MultiByte</CharacterSet>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseOfMfc>false</UseOfMfc>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseOfMfc>false</UseOfMfc>
+    <CharacterSet>MultiByte</CharacterSet>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release noconsole|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="$(VCTargetsPath)Microsoft.CPP.UpgradeFromVC71.props" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="$(VCTargetsPath)Microsoft.CPP.UpgradeFromVC71.props" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="$(VCTargetsPath)Microsoft.CPP.UpgradeFromVC71.props" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <_ProjectFileVersion>10.0.30319.1</_ProjectFileVersion>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(SolutionDir)/bin\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(SolutionDir)/temp/$(ProjectName)/$(Configuration)\</IntDir>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</LinkIncremental>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(SolutionDir)/bin\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(SolutionDir)/temp/$(ProjectName)/$(Configuration)\</IntDir>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</LinkIncremental>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Release noconsole|Win32'">$(SolutionDir)/bin\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Release noconsole|Win32'">$(SolutionDir)/temp/$(ProjectName)/$(Configuration)\</IntDir>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Release noconsole|Win32'">false</LinkIncremental>
+    <CodeAnalysisRuleSet Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">AllRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRules Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" />
+    <CodeAnalysisRuleAssemblies Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" />
+    <CodeAnalysisRuleSet Condition="'$(Configuration)|$(Platform)'=='Release noconsole|Win32'">AllRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRules Condition="'$(Configuration)|$(Platform)'=='Release noconsole|Win32'" />
+    <CodeAnalysisRuleAssemblies Condition="'$(Configuration)|$(Platform)'=='Release noconsole|Win32'" />
+    <CodeAnalysisRuleSet Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">AllRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRules Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" />
+    <CodeAnalysisRuleAssemblies Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" />
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(ProjectName)_$(Configuration).exe</TargetName>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='Release noconsole|Win32'">$(ProjectName)_$(Configuration).exe</TargetName>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(ProjectName)_$(Configuration).exe</TargetName>
+    <LibraryPath Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(SolutionDir)src\dep\StormLib;$(SolutionDir)src\dep\irrlicht;$(LibraryPath)</LibraryPath>
+    <IncludePath Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(SolutionDir)/src\dep\irrlicht;$(VCInstallDir)include;$(VCInstallDir)atlmfc\include;$(WindowsSdkDir)include;$(FrameworkSDKDir)\include;</IncludePath>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Midl>
+      <TypeLibraryName>.\Release/PseuWoW.tlb</TypeLibraryName>
+      <HeaderFileName>
+      </HeaderFileName>
+    </Midl>
+    <ClCompile>
+      <Optimization>Full</Optimization>
+      <InlineFunctionExpansion>AnySuitable</InlineFunctionExpansion>
+      <FavorSizeOrSpeed>Speed</FavorSizeOrSpeed>
+      <AdditionalIncludeDirectories>shared;Client;Client/World;Client/Realm;dep/include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_CONSOLE;_IRR_STATIC_LIB_;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <StringPooling>true</StringPooling>
+      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+      <BufferSecurityCheck>false</BufferSecurityCheck>
+      <FunctionLevelLinking>false</FunctionLevelLinking>
+      <EnableEnhancedInstructionSet>StreamingSIMDExtensions2</EnableEnhancedInstructionSet>
+      <OpenMPSupport>false</OpenMPSupport>
+      <PrecompiledHeaderOutputFile>.\Release/PseuWoW.pch</PrecompiledHeaderOutputFile>
+      <AssemblerListingLocation>$(SolutionDir)/temp/$(ProjectName)/$(Configuration)/</AssemblerListingLocation>
+      <ObjectFileName>$(SolutionDir)/temp/$(ProjectName)/$(Configuration)/</ObjectFileName>
+      <ProgramDataBaseFileName>$(SolutionDir)/temp/$(ProjectName)/$(Configuration)/</ProgramDataBaseFileName>
+      <WarningLevel>Level3</WarningLevel>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <Culture>0x0000</Culture>
+    </ResourceCompile>
+    <Link>
+      <AdditionalDependencies>odbc32.lib;odbccp32.lib;WS2_32.LIB;irrKlang.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <ShowProgress>NotSet</ShowProgress>
+      <OutputFile>$(OutDir)$(ProjectName)_$(Configuration).exe</OutputFile>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <AdditionalLibraryDirectories>$(SolutionDir)\src\dep\lib\static;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <IgnoreAllDefaultLibraries>false</IgnoreAllDefaultLibraries>
+      <IgnoreSpecificDefaultLibraries>libci.lib;%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+      <AssemblyDebug>
+      </AssemblyDebug>
+      <ProgramDatabaseFile>$(SolutionDir)/temp/$(ProjectName)/Release/PseuWoW.pdb</ProgramDatabaseFile>
+      <SubSystem>Console</SubSystem>
+      <OptimizeReferences>true</OptimizeReferences>
+      <SetChecksum>true</SetChecksum>
+      <RandomizedBaseAddress>false</RandomizedBaseAddress>
+      <DataExecutionPrevention>
+      </DataExecutionPrevention>
+      <TargetMachine>MachineX86</TargetMachine>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Midl>
+      <TypeLibraryName>.\Debug/PseuWoW.tlb</TypeLibraryName>
+      <HeaderFileName>
+      </HeaderFileName>
+    </Midl>
+    <ClCompile>
+      <Optimization>Disabled</Optimization>
+      <AdditionalIncludeDirectories>shared;Client;Client/World;Client/Realm;dep/include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;_IRR_STATIC_LIB_;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <OpenMPSupport>false</OpenMPSupport>
+      <PrecompiledHeaderOutputFile>
+      </PrecompiledHeaderOutputFile>
+      <AssemblerListingLocation>$(SolutionDir)/temp/$(ProjectName)/$(Configuration)/</AssemblerListingLocation>
+      <ObjectFileName>$(SolutionDir)/temp/$(ProjectName)/$(Configuration)/</ObjectFileName>
+      <ProgramDataBaseFileName>$(SolutionDir)/temp/$(ProjectName)/$(Configuration)/</ProgramDataBaseFileName>
+      <BrowseInformation>
+      </BrowseInformation>
+      <WarningLevel>Level3</WarningLevel>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <Culture>0x0407</Culture>
+    </ResourceCompile>
+    <Link>
+      <AdditionalDependencies>odbc32.lib;odbccp32.lib;WS2_32.LIB;irrKlang.lib;Irrlicht.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <OutputFile>$(OutDir)$(TargetName)$(TargetExt)</OutputFile>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <AdditionalLibraryDirectories>$(SolutionDir)\src\dep\lib\static;$(SolutionDir)\src\dep\lib\Win32-visualstudio;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <IgnoreSpecificDefaultLibraries>libcmt.lib;libci.lib;%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <ProgramDatabaseFile>$(SolutionDir)/temp/$(ProjectName)/PseuWoW.pdb</ProgramDatabaseFile>
+      <SubSystem>Console</SubSystem>
+      <OptimizeReferences>false</OptimizeReferences>
+      <RandomizedBaseAddress>false</RandomizedBaseAddress>
+      <DataExecutionPrevention>
+      </DataExecutionPrevention>
+      <TargetMachine>MachineX86</TargetMachine>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release noconsole|Win32'">
+    <Midl>
+      <TypeLibraryName>.\Release/PseuWoW.tlb</TypeLibraryName>
+      <HeaderFileName>
+      </HeaderFileName>
+    </Midl>
+    <ClCompile>
+      <Optimization>Full</Optimization>
+      <InlineFunctionExpansion>AnySuitable</InlineFunctionExpansion>
+      <FavorSizeOrSpeed>Speed</FavorSizeOrSpeed>
+      <AdditionalIncludeDirectories>shared;Client;Client/World;Client/Realm;dep/include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_IRR_STATIC_LIB_;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <StringPooling>true</StringPooling>
+      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+      <BufferSecurityCheck>false</BufferSecurityCheck>
+      <FunctionLevelLinking>false</FunctionLevelLinking>
+      <EnableEnhancedInstructionSet>NotSet</EnableEnhancedInstructionSet>
+      <OpenMPSupport>false</OpenMPSupport>
+      <PrecompiledHeaderOutputFile>.\Release/PseuWoW.pch</PrecompiledHeaderOutputFile>
+      <AssemblerListingLocation>$(SolutionDir)/temp/$(ProjectName)/$(Configuration)/</AssemblerListingLocation>
+      <ObjectFileName>$(SolutionDir)/temp/$(ProjectName)/$(Configuration)/</ObjectFileName>
+      <ProgramDataBaseFileName>$(SolutionDir)/temp/$(ProjectName)/$(Configuration)/</ProgramDataBaseFileName>
+      <WarningLevel>Level3</WarningLevel>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <Culture>0x0000</Culture>
+    </ResourceCompile>
+    <Link>
+      <AdditionalDependencies>odbc32.lib;odbccp32.lib;WS2_32.LIB;irrKlang.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <ShowProgress>NotSet</ShowProgress>
+      <OutputFile>$(OutDir)$(ProjectName)_$(Configuration).exe</OutputFile>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <AdditionalLibraryDirectories>$(SolutionDir)\src\dep\lib\static;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <IgnoreAllDefaultLibraries>false</IgnoreAllDefaultLibraries>
+      <IgnoreSpecificDefaultLibraries>libci.lib;%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+      <AssemblyDebug>
+      </AssemblyDebug>
+      <ProgramDatabaseFile>$(SolutionDir)/temp/$(ProjectName)/Release/PseuWoW.pdb</ProgramDatabaseFile>
+      <SubSystem>Windows</SubSystem>
+      <OptimizeReferences>true</OptimizeReferences>
+      <SetChecksum>true</SetChecksum>
+      <RandomizedBaseAddress>false</RandomizedBaseAddress>
+      <DataExecutionPrevention>
+      </DataExecutionPrevention>
+      <TargetMachine>MachineX86</TargetMachine>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="Client\Cli.cpp" />
+    <ClCompile Include="Client\ControlSocket.cpp" />
+    <ClCompile Include="Client\DefScriptInterface.cpp" />
+    <ClCompile Include="Client\main.cpp" />
+    <ClCompile Include="Client\MemoryDataHolder.cpp" />
+    <ClCompile Include="Client\PseuWoW.cpp" />
+    <ClCompile Include="Client\RemoteController.cpp" />
+    <ClCompile Include="Client\SCPDatabase.cpp" />
+    <ClCompile Include="Client\DefScript\DefScript.cpp" />
+    <ClCompile Include="Client\DefScript\DefScriptBBFunctions.cpp" />
+    <ClCompile Include="Client\DefScript\DefScriptFileFunctions.cpp" />
+    <ClCompile Include="Client\DefScript\DefScriptFunctions.cpp" />
+    <ClCompile Include="Client\DefScript\DefScriptListFunctions.cpp" />
+    <ClCompile Include="Client\DefScript\DefScriptTools.cpp" />
+    <ClCompile Include="Client\DefScript\DynamicEvent.cpp" />
+    <ClCompile Include="Client\DefScript\VarSet.cpp" />
+    <ClCompile Include="Client\World\Bag.cpp" />
+    <ClCompile Include="Client\World\CacheHandler.cpp" />
+    <ClCompile Include="Client\World\Channel.cpp" />
+    <ClCompile Include="Client\World\CMSGConstructor.cpp" />
+    <ClCompile Include="Client\World\Corpse.cpp" />
+    <ClCompile Include="Client\World\DynamicObject.cpp" />
+    <ClCompile Include="Client\World\GameObject.cpp" />
+    <ClCompile Include="Client\World\Item.cpp" />
+    <ClCompile Include="Client\World\MovementMgr.cpp" />
+    <ClCompile Include="Client\World\Object.cpp" />
+    <ClCompile Include="Client\World\ObjMgr.cpp" />
+    <ClCompile Include="Client\World\Opcodes.cpp" />
+    <ClCompile Include="Client\World\Player.cpp" />
+    <ClCompile Include="Client\World\Unit.cpp" />
+    <ClCompile Include="Client\World\UpdateData.cpp" />
+    <ClCompile Include="Client\World\World.cpp" />
+    <ClCompile Include="Client\World\WorldPacket.cpp" />
+    <ClCompile Include="Client\World\WorldSession.cpp" />
+    <ClCompile Include="Client\World\WorldSocket.cpp" />
+    <ClCompile Include="Client\World\MapMgr.cpp" />
+    <ClCompile Include="Client\Realm\RealmSession.cpp" />
+    <ClCompile Include="Client\Realm\RealmSocket.cpp" />
+    <ClCompile Include="Client\Gui\CCursorController.cpp" />
+    <ClCompile Include="Client\Gui\CImageLoaderBLP.cpp" />
+    <ClCompile Include="Client\Gui\CM2MeshFileLoader.cpp" />
+    <ClCompile Include="Client\Gui\CMDHMemoryReadFile.cpp" />
+    <ClCompile Include="Client\GUI\CWMOMeshFileLoader.cpp" />
+    <ClCompile Include="Client\Gui\DrawObject.cpp" />
+    <ClCompile Include="Client\Gui\DrawObjMgr.cpp" />
+    <ClCompile Include="Client\Gui\MemoryInterface.cpp" />
+    <ClCompile Include="Client\Gui\PseuGUI.cpp" />
+    <ClCompile Include="Client\Gui\Scene.cpp" />
+    <ClCompile Include="Client\Gui\SceneCharselection.cpp" />
+    <ClCompile Include="Client\Gui\SceneGuiStart.cpp" />
+    <ClCompile Include="Client\Gui\SceneLogin.cpp" />
+    <ClCompile Include="Client\Gui\SceneWorld.cpp" />
+    <ClCompile Include="Client\Gui\ShTlTerrainSceneNode.cpp" />
+    <ClCompile Include="Client\Gui\SImage.cpp" />
+    <ClCompile Include="Client\Gui\CIrrKlangAudioStreamLoaderMP3.cpp" />
+    <ClCompile Include="Client\Gui\CIrrKlangAudioStreamMP3.cpp" />
+    <ClCompile Include="Client\Gui\ikpMP3.cpp" />
+    <ClCompile Include="Client\Gui\irrKlangSceneNode.cpp" />
+    <ClCompile Include="Client\Gui\decoder\bits.c" />
+    <ClCompile Include="Client\Gui\decoder\mpaudec.c" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Client\Cli.h" />
+    <ClInclude Include="Client\ControlSocket.h" />
+    <ClInclude Include="Client\DefScriptInterfaceInclude.h" />
+    <ClInclude Include="Client\HelperDefs.h" />
+    <ClInclude Include="Client\main.h" />
+    <ClInclude Include="Client\MemoryDataHolder.h" />
+    <ClInclude Include="Client\PseuWoW.h" />
+    <ClInclude Include="Client\RemoteController.h" />
+    <ClInclude Include="Client\SCPDatabase.h" />
+    <ClInclude Include="dep\include\irrlicht\aabbox3d.h" />
+    <ClInclude Include="dep\include\irrlicht\CDynamicMeshBuffer.h" />
+    <ClInclude Include="dep\include\irrlicht\CIndexBuffer.h" />
+    <ClInclude Include="dep\include\irrlicht\CMeshBuffer.h" />
+    <ClInclude Include="dep\include\irrlicht\coreutil.h" />
+    <ClInclude Include="dep\include\irrlicht\CVertexBuffer.h" />
+    <ClInclude Include="dep\include\irrlicht\dimension2d.h" />
+    <ClInclude Include="dep\include\irrlicht\driverChoice.h" />
+    <ClInclude Include="dep\include\irrlicht\EAttributes.h" />
+    <ClInclude Include="dep\include\irrlicht\ECullingTypes.h" />
+    <ClInclude Include="dep\include\irrlicht\EDebugSceneTypes.h" />
+    <ClInclude Include="dep\include\irrlicht\EDeviceTypes.h" />
+    <ClInclude Include="dep\include\irrlicht\EDriverFeatures.h" />
+    <ClInclude Include="dep\include\irrlicht\EDriverTypes.h" />
+    <ClInclude Include="dep\include\irrlicht\EGUIAlignment.h" />
+    <ClInclude Include="dep\include\irrlicht\EGUIElementTypes.h" />
+    <ClInclude Include="dep\include\irrlicht\EHardwareBufferFlags.h" />
+    <ClInclude Include="dep\include\irrlicht\EMaterialFlags.h" />
+    <ClInclude Include="dep\include\irrlicht\EMaterialTypes.h" />
+    <ClInclude Include="dep\include\irrlicht\EMeshWriterEnums.h" />
+    <ClInclude Include="dep\include\irrlicht\EMessageBoxFlags.h" />
+    <ClInclude Include="dep\include\irrlicht\EPrimitiveTypes.h" />
+    <ClInclude Include="dep\include\irrlicht\ESceneNodeAnimatorTypes.h" />
+    <ClInclude Include="dep\include\irrlicht\ESceneNodeTypes.h" />
+    <ClInclude Include="dep\include\irrlicht\EShaderTypes.h" />
+    <ClInclude Include="dep\include\irrlicht\ETerrainElements.h" />
+    <ClInclude Include="dep\include\irrlicht\fast_atof.h" />
+    <ClInclude Include="dep\include\irrlicht\heapsort.h" />
+    <ClInclude Include="dep\include\irrlicht\IAnimatedMesh.h" />
+    <ClInclude Include="dep\include\irrlicht\IAnimatedMeshMD2.h" />
+    <ClInclude Include="dep\include\irrlicht\IAnimatedMeshMD3.h" />
+    <ClInclude Include="dep\include\irrlicht\IAnimatedMeshSceneNode.h" />
+    <ClInclude Include="dep\include\irrlicht\IAttributeExchangingObject.h" />
+    <ClInclude Include="dep\include\irrlicht\IAttributes.h" />
+    <ClInclude Include="dep\include\irrlicht\IBillboardSceneNode.h" />
+    <ClInclude Include="dep\include\irrlicht\IBillboardTextSceneNode.h" />
+    <ClInclude Include="dep\include\irrlicht\IBoneSceneNode.h" />
+    <ClInclude Include="dep\include\irrlicht\ICameraSceneNode.h" />
+    <ClInclude Include="dep\include\irrlicht\ICursorControl.h" />
+    <ClInclude Include="dep\include\irrlicht\IDummyTransformationSceneNode.h" />
+    <ClInclude Include="dep\include\irrlicht\IDynamicMeshBuffer.h" />
+    <ClInclude Include="dep\include\irrlicht\IEventReceiver.h" />
+    <ClInclude Include="dep\include\irrlicht\IFileArchive.h" />
+    <ClInclude Include="dep\include\irrlicht\IFileList.h" />
+    <ClInclude Include="dep\include\irrlicht\IFileSystem.h" />
+    <ClInclude Include="dep\include\irrlicht\IGeometryCreator.h" />
+    <ClInclude Include="dep\include\irrlicht\IGPUProgrammingServices.h" />
+    <ClInclude Include="dep\include\irrlicht\IGUIButton.h" />
+    <ClInclude Include="dep\include\irrlicht\IGUICheckBox.h" />
+    <ClInclude Include="dep\include\irrlicht\IGUIColorSelectDialog.h" />
+    <ClInclude Include="dep\include\irrlicht\IGUIComboBox.h" />
+    <ClInclude Include="dep\include\irrlicht\IGUIContextMenu.h" />
+    <ClInclude Include="dep\include\irrlicht\IGUIEditBox.h" />
+    <ClInclude Include="dep\include\irrlicht\IGUIElement.h" />
+    <ClInclude Include="dep\include\irrlicht\IGUIElementFactory.h" />
+    <ClInclude Include="dep\include\irrlicht\IGUIEnvironment.h" />
+    <ClInclude Include="dep\include\irrlicht\IGUIFileOpenDialog.h" />
+    <ClInclude Include="dep\include\irrlicht\IGUIFont.h" />
+    <ClInclude Include="dep\include\irrlicht\IGUIFontBitmap.h" />
+    <ClInclude Include="dep\include\irrlicht\IGUIImage.h" />
+    <ClInclude Include="dep\include\irrlicht\IGUIImageList.h" />
+    <ClInclude Include="dep\include\irrlicht\IGUIInOutFader.h" />
+    <ClInclude Include="dep\include\irrlicht\IGUIListBox.h" />
+    <ClInclude Include="dep\include\irrlicht\IGUIMeshViewer.h" />
+    <ClInclude Include="dep\include\irrlicht\IGUIScrollBar.h" />
+    <ClInclude Include="dep\include\irrlicht\IGUISkin.h" />
+    <ClInclude Include="dep\include\irrlicht\IGUISpinBox.h" />
+    <ClInclude Include="dep\include\irrlicht\IGUISpriteBank.h" />
+    <ClInclude Include="dep\include\irrlicht\IGUIStaticText.h" />
+    <ClInclude Include="dep\include\irrlicht\IGUITabControl.h" />
+    <ClInclude Include="dep\include\irrlicht\IGUITable.h" />
+    <ClInclude Include="dep\include\irrlicht\IGUIToolbar.h" />
+    <ClInclude Include="dep\include\irrlicht\IGUITreeView.h" />
+    <ClInclude Include="dep\include\irrlicht\IGUIWindow.h" />
+    <ClInclude Include="dep\include\irrlicht\IImage.h" />
+    <ClInclude Include="dep\include\irrlicht\IImageLoader.h" />
+    <ClInclude Include="dep\include\irrlicht\IImageWriter.h" />
+    <ClInclude Include="dep\include\irrlicht\IIndexBuffer.h" />
+    <ClInclude Include="dep\include\irrlicht\ILightManager.h" />
+    <ClInclude Include="dep\include\irrlicht\ILightSceneNode.h" />
+    <ClInclude Include="dep\include\irrlicht\ILogger.h" />
+    <ClInclude Include="dep\include\irrlicht\IMaterialRenderer.h" />
+    <ClInclude Include="dep\include\irrlicht\IMaterialRendererServices.h" />
+    <ClInclude Include="dep\include\irrlicht\IMesh.h" />
+    <ClInclude Include="dep\include\irrlicht\IMeshBuffer.h" />
+    <ClInclude Include="dep\include\irrlicht\IMeshCache.h" />
+    <ClInclude Include="dep\include\irrlicht\IMeshLoader.h" />
+    <ClInclude Include="dep\include\irrlicht\IMeshManipulator.h" />
+    <ClInclude Include="dep\include\irrlicht\IMeshSceneNode.h" />
+    <ClInclude Include="dep\include\irrlicht\IMeshWriter.h" />
+    <ClInclude Include="dep\include\irrlicht\IMetaTriangleSelector.h" />
+    <ClInclude Include="dep\include\irrlicht\IOSOperator.h" />
+    <ClInclude Include="dep\include\irrlicht\IParticleAffector.h" />
+    <ClInclude Include="dep\include\irrlicht\IParticleAnimatedMeshSceneNodeEmitter.h" />
+    <ClInclude Include="dep\include\irrlicht\IParticleAttractionAffector.h" />
+    <ClInclude Include="dep\include\irrlicht\IParticleBoxEmitter.h" />
+    <ClInclude Include="dep\include\irrlicht\IParticleCylinderEmitter.h" />
+    <ClInclude Include="dep\include\irrlicht\IParticleEmitter.h" />
+    <ClInclude Include="dep\include\irrlicht\IParticleFadeOutAffector.h" />
+    <ClInclude Include="dep\include\irrlicht\IParticleGravityAffector.h" />
+    <ClInclude Include="dep\include\irrlicht\IParticleMeshEmitter.h" />
+    <ClInclude Include="dep\include\irrlicht\IParticleRingEmitter.h" />
+    <ClInclude Include="dep\include\irrlicht\IParticleRotationAffector.h" />
+    <ClInclude Include="dep\include\irrlicht\IParticleSphereEmitter.h" />
+    <ClInclude Include="dep\include\irrlicht\IParticleSystemSceneNode.h" />
+    <ClInclude Include="dep\include\irrlicht\IQ3LevelMesh.h" />
+    <ClInclude Include="dep\include\irrlicht\IQ3Shader.h" />
+    <ClInclude Include="dep\include\irrlicht\IReadFile.h" />
+    <ClInclude Include="dep\include\irrlicht\IReferenceCounted.h" />
+    <ClInclude Include="dep\include\irrlicht\irrAllocator.h" />
+    <ClInclude Include="dep\include\irrlicht\irrArray.h" />
+    <ClInclude Include="dep\include\irrlicht\IrrCompileConfig.h" />
+    <ClInclude Include="dep\include\irrlicht\irrlicht.h" />
+    <ClInclude Include="dep\include\irrlicht\IrrlichtDevice.h" />
+    <ClInclude Include="dep\include\irrlicht\irrList.h" />
+    <ClInclude Include="dep\include\irrlicht\irrMap.h" />
+    <ClInclude Include="dep\include\irrlicht\irrMath.h" />
+    <ClInclude Include="dep\include\irrlicht\irrString.h" />
+    <ClInclude Include="dep\include\irrlicht\irrTypes.h" />
+    <ClInclude Include="dep\include\irrlicht\irrXML.h" />
+    <ClInclude Include="dep\include\irrlicht\ISceneCollisionManager.h" />
+    <ClInclude Include="dep\include\irrlicht\ISceneManager.h" />
+    <ClInclude Include="dep\include\irrlicht\ISceneNode.h" />
+    <ClInclude Include="dep\include\irrlicht\ISceneNodeAnimator.h" />
+    <ClInclude Include="dep\include\irrlicht\ISceneNodeAnimatorCameraFPS.h" />
+    <ClInclude Include="dep\include\irrlicht\ISceneNodeAnimatorCameraMaya.h" />
+    <ClInclude Include="dep\include\irrlicht\ISceneNodeAnimatorCollisionResponse.h" />
+    <ClInclude Include="dep\include\irrlicht\ISceneNodeAnimatorFactory.h" />
+    <ClInclude Include="dep\include\irrlicht\ISceneNodeFactory.h" />
+    <ClInclude Include="dep\include\irrlicht\ISceneUserDataSerializer.h" />
+    <ClInclude Include="dep\include\irrlicht\IShaderConstantSetCallBack.h" />
+    <ClInclude Include="dep\include\irrlicht\IShadowVolumeSceneNode.h" />
+    <ClInclude Include="dep\include\irrlicht\ISkinnedMesh.h" />
+    <ClInclude Include="dep\include\irrlicht\ITerrainSceneNode.h" />
+    <ClInclude Include="dep\include\irrlicht\ITextSceneNode.h" />
+    <ClInclude Include="dep\include\irrlicht\ITexture.h" />
+    <ClInclude Include="dep\include\irrlicht\ITimer.h" />
+    <ClInclude Include="dep\include\irrlicht\ITriangleSelector.h" />
+    <ClInclude Include="dep\include\irrlicht\IVertexBuffer.h" />
+    <ClInclude Include="dep\include\irrlicht\IVideoDriver.h" />
+    <ClInclude Include="dep\include\irrlicht\IVideoModeList.h" />
+    <ClInclude Include="dep\include\irrlicht\IVolumeLightSceneNode.h" />
+    <ClInclude Include="dep\include\irrlicht\IWriteFile.h" />
+    <ClInclude Include="dep\include\irrlicht\IXMLReader.h" />
+    <ClInclude Include="dep\include\irrlicht\IXMLWriter.h" />
+    <ClInclude Include="dep\include\irrlicht\Keycodes.h" />
+    <ClInclude Include="dep\include\irrlicht\line2d.h" />
+    <ClInclude Include="dep\include\irrlicht\line3d.h" />
+    <ClInclude Include="dep\include\irrlicht\matrix4.h" />
+    <ClInclude Include="dep\include\irrlicht\path.h" />
+    <ClInclude Include="dep\include\irrlicht\plane3d.h" />
+    <ClInclude Include="dep\include\irrlicht\position2d.h" />
+    <ClInclude Include="dep\include\irrlicht\quaternion.h" />
+    <ClInclude Include="dep\include\irrlicht\rect.h" />
+    <ClInclude Include="dep\include\irrlicht\S3DVertex.h" />
+    <ClInclude Include="dep\include\irrlicht\SAnimatedMesh.h" />
+    <ClInclude Include="dep\include\irrlicht\SceneParameters.h" />
+    <ClInclude Include="dep\include\irrlicht\SColor.h" />
+    <ClInclude Include="dep\include\irrlicht\SExposedVideoData.h" />
+    <ClInclude Include="dep\include\irrlicht\SIrrCreationParameters.h" />
+    <ClInclude Include="dep\include\irrlicht\SKeyMap.h" />
+    <ClInclude Include="dep\include\irrlicht\SLight.h" />
+    <ClInclude Include="dep\include\irrlicht\SMaterial.h" />
+    <ClInclude Include="dep\include\irrlicht\SMaterialLayer.h" />
+    <ClInclude Include="dep\include\irrlicht\SMesh.h" />
+    <ClInclude Include="dep\include\irrlicht\SMeshBuffer.h" />
+    <ClInclude Include="dep\include\irrlicht\SMeshBufferLightMap.h" />
+    <ClInclude Include="dep\include\irrlicht\SMeshBufferTangents.h" />
+    <ClInclude Include="dep\include\irrlicht\SParticle.h" />
+    <ClInclude Include="dep\include\irrlicht\SSharedMeshBuffer.h" />
+    <ClInclude Include="dep\include\irrlicht\SSkinMeshBuffer.h" />
+    <ClInclude Include="dep\include\irrlicht\SVertexIndex.h" />
+    <ClInclude Include="dep\include\irrlicht\SVertexManipulator.h" />
+    <ClInclude Include="dep\include\irrlicht\SViewFrustum.h" />
+    <ClInclude Include="dep\include\irrlicht\triangle3d.h" />
+    <ClInclude Include="dep\include\irrlicht\vector2d.h" />
+    <ClInclude Include="dep\include\irrlicht\vector3d.h" />
+    <CustomBuildStep Include="Client\DefScript\DefScript.h" />
+    <ClInclude Include="Client\DefScript\DefScriptDefines.h" />
+    <ClInclude Include="Client\DefScript\DefScriptTools.h" />
+    <ClInclude Include="Client\DefScript\DynamicEvent.h" />
+    <ClInclude Include="Client\DefScript\TypeStorage.h" />
+    <ClInclude Include="Client\DefScript\VarSet.h" />
+    <ClInclude Include="Client\World\Bag.h" />
+    <ClInclude Include="Client\World\CacheHandler.h" />
+    <ClInclude Include="Client\World\Channel.h" />
+    <ClInclude Include="Client\World\Corpse.h" />
+    <ClInclude Include="Client\World\DynamicObject.h" />
+    <ClInclude Include="Client\World\GameObject.h" />
+    <ClInclude Include="Client\World\Item.h" />
+    <ClInclude Include="Client\World\MovementMgr.h" />
+    <ClInclude Include="Client\World\Object.h" />
+    <ClInclude Include="Client\World\ObjectDefines.h" />
+    <ClInclude Include="Client\World\ObjMgr.h" />
+    <ClInclude Include="Client\World\Opcodes.h" />
+    <ClInclude Include="Client\World\Player.h" />
+    <ClInclude Include="Client\World\SharedDefines.h" />
+    <ClInclude Include="Client\World\Unit.h" />
+    <ClInclude Include="Client\World\UpdateData.h" />
+    <ClInclude Include="Client\World\UpdateFields.h" />
+    <ClInclude Include="Client\World\UpdateMask.h" />
+    <ClInclude Include="Client\World\World.h" />
+    <ClInclude Include="Client\World\WorldPacket.h" />
+    <ClInclude Include="Client\World\WorldSession.h" />
+    <ClInclude Include="Client\World\WorldSocket.h" />
+    <ClInclude Include="Client\World\MapMgr.h" />
+    <ClInclude Include="Client\Realm\RealmSession.h" />
+    <ClInclude Include="Client\Realm\RealmSocket.h" />
+    <ClInclude Include="Client\Gui\CCursorController.h" />
+    <ClInclude Include="Client\Gui\CImageLoaderBLP.h" />
+    <ClInclude Include="Client\Gui\CM2MeshFileLoader.h" />
+    <ClInclude Include="Client\Gui\CMDHMemoryReadFile.h" />
+    <ClInclude Include="Client\GUI\CWMOMeshFileLoader.h" />
+    <ClInclude Include="Client\Gui\DrawObject.h" />
+    <ClInclude Include="Client\Gui\DrawObjMgr.h" />
+    <ClInclude Include="Client\Gui\GUIEventReceiver.h" />
+    <ClInclude Include="Client\Gui\MCamera.h" />
+    <ClInclude Include="Client\Gui\MemoryInterface.h" />
+    <ClInclude Include="Client\Gui\MInput.h" />
+    <ClInclude Include="Client\Gui\PseuGUI.h" />
+    <ClInclude Include="Client\Gui\Scene.h" />
+    <ClInclude Include="Client\Gui\SceneData.h" />
+    <ClInclude Include="Client\Gui\ShTlTerrainSceneNode.h" />
+    <ClInclude Include="Client\Gui\SImage.h" />
+    <ClInclude Include="Client\Gui\TlTMesh.h" />
+    <ClInclude Include="Client\Gui\TlTSector.h" />
+    <ClInclude Include="Client\Gui\CIrrKlangAudioStreamLoaderMP3.h" />
+    <ClInclude Include="Client\Gui\CIrrKlangAudioStreamMP3.h" />
+    <ClInclude Include="Client\Gui\irrKlangSceneNode.h" />
+    <ClInclude Include="Client\Gui\decoder\internal.h" />
+    <ClInclude Include="Client\Gui\decoder\mpaudec.h" />
+    <ClInclude Include="Client\Gui\decoder\mpaudectab.h" />
+    <ClInclude Include="Client\Gui\decoder\mpegaudio.h" />
+    <ClInclude Include="Client\resource.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Client\Pseu1.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="Client\PseuWoW.rc" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="shared_VC90.vcxproj">
+      <Project>{f548fc51-24a4-45ff-a381-bebc39f18270}</Project>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+    </ProjectReference>
+    <ProjectReference Include="zlib_VC90.vcxproj">
+      <Project>{8f1dea42-6a5b-4b62-839d-c141a7bfacf2}</Project>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+    </ProjectReference>
+    <ProjectReference Include="zthread_VC90.vcxproj">
+      <Project>{262199e8-eedf-4700-a1d1-e9cc901cf480}</Project>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

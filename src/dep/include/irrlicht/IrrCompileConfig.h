@@ -1,4 +1,4 @@
-// Copyright (C) 2002-2008 Nikolaus Gebhardt
+// Copyright (C) 2002-2009 Nikolaus Gebhardt
 // This file is part of the "Irrlicht Engine".
 // For conditions of distribution and use, see copyright notice in irrlicht.h
 
@@ -6,7 +6,14 @@
 #define __IRR_COMPILE_CONFIG_H_INCLUDED__
 
 //! Irrlicht SDK Version
-#define IRRLICHT_SDK_VERSION "1.5"
+#define IRRLICHT_VERSION_MAJOR 1
+#define IRRLICHT_VERSION_MINOR 5
+#define IRRLICHT_VERSION_REVISION 2
+// This flag will be defined only in SVN, the official release code will have
+// it undefined
+//#define IRRLICHT_VERSION_SVN
+//#define IRRLICHT_SDK_VERSION "1.5.2-SVN"
+#define IRRLICHT_SDK_VERSION "1.5.2"
 
 #include <stdio.h> // TODO: Although included elsewhere this is required at least for mingw
 
@@ -58,10 +65,7 @@
 #endif
 
 #if !defined(_IRR_WINDOWS_API_) && !defined(_IRR_OSX_PLATFORM_)
-#if defined(__sparc__) || defined(__sun__)
-#define __BIG_ENDIAN__
-#define _IRR_SOLARIS_PLATFORM_
-#else
+#ifndef _IRR_SOLARIS_PLATFORM_
 #define _IRR_LINUX_PLATFORM_
 #endif
 #define _IRR_POSIX_API_
@@ -69,6 +73,10 @@
 #ifndef _IRR_USE_SDL_DEVICE_
 #define _IRR_USE_LINUX_DEVICE_
 #endif
+#endif
+
+#if defined(__sparc__) || defined(__sun__)
+#define __BIG_ENDIAN__
 #endif
 
 //! Define _IRR_COMPILE_WITH_JOYSTICK_SUPPORT_ if you want joystick events.
@@ -82,16 +90,23 @@ directX header files, and directX is only available on windows platforms. If you
 are using Dev-Cpp, and want to compile this using a DX dev pack, you can define
 _IRR_COMPILE_WITH_DX9_DEV_PACK_. So you simply need to add something like this
 to the compiler settings: -DIRR_COMPILE_WITH_DX9_DEV_PACK
-and this to the linker settings: -ld3dx9 -ld3dx8 **/
+and this to the linker settings: -ld3dx9 -ld3dx8
+
+Microsoft have chosen to remove D3D8 headers from their recent DXSDKs, and 
+so D3D8 support is now disabled by default.  If you really want to build 
+with D3D8 support, then you will have to source a DXSDK with the appropriate 
+headers, e.g. Summer 2004.  This is a Microsoft issue, not an Irrlicht one.
+*/
 #if defined(_IRR_WINDOWS_API_) && (!defined(__GNUC__) || defined(IRR_COMPILE_WITH_DX9_DEV_PACK))
 
+//! Only define _IRR_COMPILE_WITH_DIRECT3D_8_ if you have an appropriate DXSDK, e.g. Summer 2004 
 #define _IRR_COMPILE_WITH_DIRECT3D_8_
 #define _IRR_COMPILE_WITH_DIRECT3D_9_
 
 #endif
 
 //! Define _IRR_COMPILE_WITH_OPENGL_ to compile the Irrlicht engine with OpenGL.
-/** If you do not wish the engine to be compiled with OpengGL, comment this
+/** If you do not wish the engine to be compiled with OpenGL, comment this
 define out. */
 #define _IRR_COMPILE_WITH_OPENGL_
 
@@ -323,9 +338,17 @@ precision will be lower but speed higher. currently X86 only
 #define IRRCALLCONV __cdecl
 #endif // STDCALL_SUPPORTED
 
+#else // _IRR_WINDOWS_API_
+
+// Force symbol export in shared libraries built with gcc.
+#if (__GNUC__ >= 4) && !defined(_IRR_STATIC_LIB_) && defined(IRRLICHT_EXPORTS)
+#define IRRLICHT_API __attribute__ ((visibility("default")))
 #else
 #define IRRLICHT_API
+#endif
+
 #define IRRCALLCONV
+
 #endif // _IRR_WINDOWS_API_
 
 // We need to disable DIRECT3D9 support for Visual Studio 6.0 because
@@ -362,4 +385,3 @@ precision will be lower but speed higher. currently X86 only
 #endif
 
 #endif // __IRR_COMPILE_CONFIG_H_INCLUDED__
-

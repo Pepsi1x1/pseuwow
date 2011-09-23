@@ -51,6 +51,8 @@ IAnimatedMesh* CWMOMeshFileLoader::createMesh(io::IReadFile* file)
     if(!file)
         return 0;
     MeshFile = file;
+	//IrrLicht 1.7
+	//std::string filename=MeshFile->getFileName().c_str();
     std::string filename=MeshFile->getFileName();
     Mesh = new scene::CSkinnedMesh();
 
